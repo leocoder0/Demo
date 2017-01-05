@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.69999999999999996" contentMode="scaleToFill" id="iN0-l3-epB" customClass="MWPlayerToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="速度:10.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBa-nI-0Hn">
+                    <rect key="frame" x="206" y="12" width="59" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="59" id="Pao-1A-L39"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" stepValue="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ORl-OO-qw4">
+                    <rect key="frame" x="273" y="8" width="94" height="29"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="rateChange:" destination="iN0-l3-epB" eventType="valueChanged" id="lNa-kG-fVJ"/>
+                    </connections>
+                </stepper>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ena-Bf-KW9">
+                    <rect key="frame" x="57" y="10" width="149" height="24"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="K5N-Jm-pNo"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mj-TA-Nci">
+                    <rect key="frame" x="158" y="14" width="40" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="e9V-Pd-ykO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tRQ-sf-KAN">
+                    <rect key="frame" x="97" y="7" width="61" height="31"/>
+                    <connections>
+                        <action selector="progressSliderTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="BpG-QO-WI2"/>
+                        <action selector="progressSliderTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpOutside" id="Zup-Pg-3zw"/>
+                        <action selector="progressSliderValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="sSf-GN-vqT"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqs-0O-z5g">
+                    <rect key="frame" x="57" y="14" width="40" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="qhJ-jd-Huf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-j4-DKt">
+                    <rect key="frame" x="14" y="5" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="VvN-2B-5pP"/>
+                        <constraint firstAttribute="width" constant="35" id="mYk-a7-DaL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" backgroundImage="playbar_pausebtn_nomal.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="playAndPauseBtnClick:" destination="iN0-l3-epB" eventType="touchDown" id="GoE-Tq-DF6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tRQ-sf-KAN" firstAttribute="leading" secondItem="Fqs-0O-z5g" secondAttribute="trailing" constant="2" id="1WG-vN-yn1"/>
+                <constraint firstItem="JBa-nI-0Hn" firstAttribute="leading" secondItem="ena-Bf-KW9" secondAttribute="trailing" id="7Nq-2p-ES6"/>
+                <constraint firstItem="Fqs-0O-z5g" firstAttribute="leading" secondItem="kDB-j4-DKt" secondAttribute="trailing" constant="8" id="Jhq-mL-Kov"/>
+                <constraint firstItem="1Mj-TA-Nci" firstAttribute="centerY" secondItem="ena-Bf-KW9" secondAttribute="centerY" id="KpD-lD-cHs"/>
+                <constraint firstItem="1Mj-TA-Nci" firstAttribute="leading" secondItem="tRQ-sf-KAN" secondAttribute="trailing" constant="2" id="Pqi-YV-TSW"/>
+                <constraint firstItem="JBa-nI-0Hn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Qlg-PJ-3A9"/>
+                <constraint firstAttribute="trailing" secondItem="ORl-OO-qw4" secondAttribute="trailing" constant="8" id="Z81-U7-M48"/>
+                <constraint firstItem="ena-Bf-KW9" firstAttribute="leading" secondItem="kDB-j4-DKt" secondAttribute="trailing" constant="8" id="cLG-dm-aU4"/>
+                <constraint firstItem="ORl-OO-qw4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="fNx-w6-beS"/>
+                <constraint firstItem="Fqs-0O-z5g" firstAttribute="centerY" secondItem="ena-Bf-KW9" secondAttribute="centerY" id="g0b-xd-Bb0"/>
+                <constraint firstItem="JBa-nI-0Hn" firstAttribute="leading" secondItem="1Mj-TA-Nci" secondAttribute="trailing" constant="8" id="gP4-S3-Tia"/>
+                <constraint firstItem="JBa-nI-0Hn" firstAttribute="centerY" secondItem="ORl-OO-qw4" secondAttribute="centerY" id="hwe-0P-7RJ"/>
+                <constraint firstItem="kDB-j4-DKt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="l4D-pK-WNY"/>
+                <constraint firstItem="tRQ-sf-KAN" firstAttribute="centerY" secondItem="ena-Bf-KW9" secondAttribute="centerY" id="oCB-cP-3fP"/>
+                <constraint firstItem="ORl-OO-qw4" firstAttribute="leading" secondItem="JBa-nI-0Hn" secondAttribute="trailing" constant="8" id="rKF-j9-ajz"/>
+                <constraint firstItem="kDB-j4-DKt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yDn-Cn-SG2"/>
+                <constraint firstItem="ena-Bf-KW9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yuo-Xu-eWA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="currentTimeLabel" destination="Fqs-0O-z5g" id="c5X-2G-W9k"/>
+                <outlet property="playAndPauseBtn" destination="kDB-j4-DKt" id="YcN-QF-FDb"/>
+                <outlet property="progressSlider" destination="tRQ-sf-KAN" id="l4I-mp-JPW"/>
+                <outlet property="rateLabel" destination="JBa-nI-0Hn" id="zXY-2C-tHw"/>
+                <outlet property="stepper" destination="ORl-OO-qw4" id="XaG-UP-lgy"/>
+                <outlet property="totalTimeLabel" destination="1Mj-TA-Nci" id="0bF-Wb-YXO"/>
+            </connections>
+            <point key="canvasLocation" x="245.5" y="201"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="playbar_pausebtn_nomal.png" width="80" height="80"/>
+    </resources>
+</document>
